@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khali App Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer {
+      background: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #app-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .app-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 15px;
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .app-card img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .app-card h2 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .app-card p {
+      font-size: 14px;
+      color: #555;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px;
+      background: #1e88e5;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Khali App Store</h1>
+  </header>
+
+  <main id="app-list">
+    <!-- Apps will be loaded here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Khali App Store</p>
+  </footer>
+
+  <script>
+    // Define apps directly in JS
+    const apps = [
+      {
+        id: 1,
+        name: "Chat AI",
+        description: "Talk to AI like Bernard Khalifa",
+        image: "https://via.placeholder.com/100",
+        download: "#"
+      },
+      {
+        id: 2,
+        name: "BK Pay",
+        description: "Fast payment app with Orange Money",
+        image: "https://via.placeholder.com/100",
+        download: "#"
+      },
+      {
+        id: 3,
+        name: "Khali Videos",
+        description: "Share and watch videos",
+        image: "https://via.placeholder.com/100",
+        download: "#"
+      }
+    ];
+
+    const appList = document.getElementById('app-list');
+    apps.forEach(app => {
+      const card = document.createElement('div');
+      card.className = 'app-card';
+      card.innerHTML = `
+        <img src="${app.image}" alt="${app.name}">
+        <h2>${app.name}</h2>
+        <p>${app.description}</p>
+        <a href="${app.download}" class="download-btn">Download</a>
+      `;
+      appList.appendChild(card);
+    });
+  </script>
+</body>
+<style>html{
+ color:darkviolet;
+ font-size:25px;
+ font-weight:600;
+}
+</style><script>/*Here write your javascript code*/</script></html>
